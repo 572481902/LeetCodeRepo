@@ -76,7 +76,7 @@ public class LeetCode0004 {
 	}
 	
 	@Test
-	public void test0004() {
+	public void testFindMedianSortedArrays() {
 		
 		int[] nums1 = new int[]{1, 3};
 		int[] nums2 = new int[]{2};

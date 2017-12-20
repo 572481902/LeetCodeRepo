@@ -3,6 +3,8 @@ package com.heili.q0001;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.Test;
+
 /*
  * Description:
  * 	Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -37,5 +39,16 @@ public class LeetCode0001 {
 		return null;
 		
     }
+	
+	
+	@Test
+	public void testTwoSum() {
+		
+		int[] nums = new int[]{2, 7, 11, 15}; 
+		int target = 9;
+		
+		System.out.println("[" + twoSum(nums, target)[0] + ", " + twoSum(nums, target)[1] + "]"); 
+		
+	}
 	
 }

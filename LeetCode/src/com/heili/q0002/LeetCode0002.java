@@ -1,5 +1,7 @@
 package com.heili.q0002;
 
+import org.junit.Test;
+
 class ListNode {
 	int val;
 	ListNode next;
@@ -10,7 +12,7 @@ class ListNode {
 
 public class LeetCode0002 {
 
-	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 		ListNode cursor1 = l1;
 		ListNode cursor2 = l2;
@@ -79,23 +81,40 @@ public class LeetCode0002 {
 		return resultListNode;
 	}
 
-	public static void main(String[] args) {
+	@Test
+	public void testAddTwoNumbers() {
 		
 		ListNode node2 = new ListNode(4);
 		ListNode node3 = new ListNode(3);
 		
-		ListNode node5 = new ListNode(9);
+		ListNode node5 = new ListNode(6);
 		ListNode node6 = new ListNode(4);
 		
-		ListNode l1 = new ListNode(1);
-		/*l1.next = node2;
-		node2.next = node3;*/
+		ListNode l1 = new ListNode(2);
+		l1.next = node2;
+		node2.next = node3;
 		
-		ListNode l2 = new ListNode(9);
+		ListNode l2 = new ListNode(5);
 		l2.next = node5;
-		/*node5.next = node6;*/
+		node5.next = node6;
 		
-		addTwoNumbers(l1, l2);
+		ListNode resultCursor = addTwoNumbers(l1, l2);
+		
+		while (resultCursor != null) {
+			
+			if (resultCursor.next == null) {
+				
+				System.out.print(resultCursor.val);
+				
+			} else {
+				
+				System.out.print(resultCursor.val + "-->");
+				
+			}
+			
+			resultCursor = resultCursor.next;
+			
+		}
 		
 	}
 	

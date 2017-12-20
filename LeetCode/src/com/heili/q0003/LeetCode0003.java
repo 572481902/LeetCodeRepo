@@ -3,6 +3,8 @@ package com.heili.q0003;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Test;
+
 public class LeetCode0003 {
 
 public int lengthOfLongestSubstring(String s) {
@@ -53,4 +55,13 @@ public int lengthOfLongestSubstring(String s) {
 		
     }
 	
+
+	@Test
+	public void testLengthOfLongestSubstring() {
+		
+		String s = "";
+		
+		System.out.println(lengthOfLongestSubstring(s));
+		
+	}
 }
