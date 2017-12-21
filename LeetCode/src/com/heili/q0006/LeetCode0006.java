@@ -24,27 +24,16 @@ public class LeetCode0006 {
 
 			for (int j = 0; j <= Math.ceil(s.length() / (2 * numRows - 2)); ++j) {
 
-				if (i == 0 || i == numRows - 1) {
+				if ((i + (numRows - 1) * 2 * j) < s.length()) {
 
-					if ((i + (numRows - 1) * 2 * j) < s.length()) {
+					sb.append(s.charAt(i + (numRows - 1) * 2 * j));
 
-						sb.append(s.charAt(i + (numRows - 1) * 2 * j));
+				}
+					
+				if (!(i == 0 || i == numRows - 1) && i + ((numRows - i - 1) * 2) + ((numRows - 1) * 2 * j) < s.length()) {
 
-					}
+					sb.append(s.charAt(i + ((numRows - i - 1) * 2) + ((numRows - 1) * 2 * j)));
 
-				} else {
-
-					if ((i + (numRows - 1) * 2 * j) < s.length()) {
-
-						sb.append(s.charAt(i + (numRows - 1) * 2 * j));
-
-					}
-
-					if (i + ((numRows - i - 1) * 2) + ((numRows - 1) * 2 * j) < s.length()) {
-
-						sb.append(s.charAt(i + ((numRows - i - 1) * 2) + ((numRows - 1) * 2 * j)));
-
-					}
 				}
 			}
 		}
@@ -57,7 +46,7 @@ public class LeetCode0006 {
 	@Test
 	public void testConvert() {
 
-		System.out.println(convert("PAYPALISHIRING", 1));
+		System.out.println(convert("PAYPALISHIRING", 3));
 
 	}
 
