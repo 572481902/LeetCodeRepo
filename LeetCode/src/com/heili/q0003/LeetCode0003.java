@@ -5,9 +5,14 @@ import java.util.List;
 
 import org.junit.Test;
 
+/*
+ *	Description:
+ *		Given a string, find the length of the longest substring without repeating characters.
+ */
+
 public class LeetCode0003 {
 
-public int lengthOfLongestSubstring(String s) {
+	public int lengthOfLongestSubstring(String s) {
 		
 		int longestSize = 0;
 		int repIndex = 0;

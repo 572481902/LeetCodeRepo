@@ -3,11 +3,9 @@ package com.heili.q0005;
 import org.junit.Test;
 
 /*
- * 
- * Description:
- *	Given a string s, find the longest palindromic substring in s. 
- *	You may assume that the maximum length of s is 1000.
- * 
+ *	Description:
+ *		Given a string s, find the longest palindromic substring in s. 
+ *		You may assume that the maximum length of s is 1000.
  */
 
 public class LeetCode0005 {

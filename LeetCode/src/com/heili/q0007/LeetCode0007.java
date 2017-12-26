@@ -2,6 +2,11 @@ package com.heili.q0007;
 
 import org.junit.Test;
 
+/*
+ *	Description:
+ *		Given a 32-bit signed integer, reverse digits of an integer.
+ */
+
 public class LeetCode0007 {
 
 	public int reverse(int x) {
